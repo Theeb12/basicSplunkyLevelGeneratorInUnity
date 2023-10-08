@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 03c0b932d642d314fb4d5d4f651c4455
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 257
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26841036953b392439e0b91ee7b35e08
+      internalID: -2005624006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_7
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 288
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b62fe8f70f23e4a988839581a10eed
+      internalID: 1799652210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 225
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856323bde08fedb44ba448a8997d349f
+      internalID: 61491035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 188
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3f666eac567a0489dca570edf4e0c0
+      internalID: -155434196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 154
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d159ab2cc51ec2444b89ff347ef43f6a
+      internalID: 1595757878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_27
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 128
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc54ded54c4325e419975e9bb24e9504
+      internalID: -1684813229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_28
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 97
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d6a755308dbee4fa819be47b076f0b
+      internalID: 1846202708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_31
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 65
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3df0d4cf9dec54b88748d85a78f4a8
+      internalID: -1848719057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_34
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 33
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f4700d87387ee46961721eb8d0de7d
+      internalID: 1900840662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_37
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0168dded5022f19479105f9f78c51daf
+      internalID: -1633240439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_0: 1269201918
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_1: -1653871150
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_10: 575017630
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_11: -1330099009
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_12: 61491035
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_13: -1788269165
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_14: -270479121
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_15: 1336206163
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_16: -155434196
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_17: 60403489
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_18: -1390814813
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_19: 1273945378
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_2: 1143981577
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_20: -1987742947
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_21: 2081938292
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_22: 1595757878
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_23: -1336384980
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_24: -1661322821
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_25: 80786950
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_26: -1956176645
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_27: -1684813229
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_28: 1846202708
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_29: 1392445012
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_3: 1498250938
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_30: -76129215
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_31: -1848719057
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_32: -775244660
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_33: 1784865253
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_34: 1900840662
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_35: 168802086
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_36: -456793504
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_37: -1633240439
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_38: 1010234402
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_39: -92365006
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_4: -1243155929
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_5: -1666776775
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_6: -2005624006
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_7: 1799652210
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_8: -806416638
+      DS DSi - Mario vs Donkey Kong Mini-Land Mayhem - Fireball_9: -569645702
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
