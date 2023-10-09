@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //float speed = 5;
-    bool grounded = false;
-    float jumpHeight = 5;
+    //General Input
     SpriteRenderer sprRend;
     Rigidbody2D _rigidbody;
 
@@ -20,6 +18,16 @@ public class PlayerMovement : MonoBehaviour
 
     //movement control
     private float xSpeed;
+
+    //Jump control
+    bool grounded = false;
+
+    //attack control
+    private float attackcdTimer;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    private int bulletForce = 50;
+    private int bulletSpeed = 5;
 
 
     // Start is called before the first frame update
@@ -54,26 +62,38 @@ public class PlayerMovement : MonoBehaviour
             sprRend.flipX = false;
         }
         */
-        
+        attack();
         if (PublicVariables.dash_enable)
         {
             dash();
         }
         movement();
+        jump();
+    }
+
+    void attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) && attackcdTimer > PublicVariables.attackcd)
+        {
+            attackcdTimer = 0;
+            GameObject newBullet;
+            newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed,0) * bulletForce *transform.localScale);
+        }
+        attackcdTimer += Time.deltaTime;
+    }
+
+
+    void jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, PublicVariables.player_jump);
+        }
     }
 
     void movement()
     {
-        /*
-        xSpeed = Input.GetAxisRaw("Horizontal") * PublicVariables.player_speed;
-
-        if((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0))
-        {
-            transform.localScale *= new Vector2(-1,1);
-        }
-        //print(Time.fixedDeltaTime);
-        _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
-        */
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         Vector3 scale = transform.localScale;
         if (horizontalInput > 0)

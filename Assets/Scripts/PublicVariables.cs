@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PublicVariables : MonoBehaviour
 {
-    public static int player_speed = 5;
-    public static int player_jump = 0;
+    //Player Health
     public static int player_health = 5;
+
+    //Player Dash
     public static bool dash_enable = true;
     public static float dashcd = 3;
     public static float dashLimit = 0.1f;
 
+    //Player Movement
+    public static int player_speed = 5;
+    public static int player_jump = 5;
+
+    //Player Attack
+    public static float attackcd = 3;
+    public static int attackDmg = 1;
 }
