@@ -9,7 +9,7 @@ public class Ranged_enemy : MonoBehaviour
     private GameObject player;
     public float attack_range;
 
-    //[SerializeField] private Animator anim;
+    [SerializeField] private Animator anim;
 
     private float timer;
 
@@ -30,7 +30,7 @@ public class Ranged_enemy : MonoBehaviour
             {
                 timer = 0;
                 Debug.Log("Ranged_Attack_Performed");
-                //anim.SetTrigger("RangedAttack");
+                anim.SetTrigger("RangedAttack");
             }
         }
 
