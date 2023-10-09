@@ -20,12 +20,12 @@ public class Melee_enemyAttack : MonoBehaviour
     //reference to player
     private Health playerHealth;
     private enemy_Patrol enemyPatrol;
-    //private Animator anim;
+    private Animator anim;
 
     private void Awake()
     {
         enemyPatrol = GetComponentInParent<enemy_Patrol>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class Melee_enemyAttack : MonoBehaviour
             if (cooldownTime >= attackCooldown)
             {
                 cooldownTime = 0;
-                //anim.SetTrigger("meleeattack");
+                anim.SetTrigger("meleeattack");
                 Debug.Log("Melee Attack Perform");
             }
         }

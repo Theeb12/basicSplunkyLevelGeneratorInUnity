@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemy_health : MonoBehaviour
 {
-    //[SerializeField] private Animator anim;
+    [SerializeField] private Animator anim;
     [SerializeField] private float startingHealth;
     //[SerializeField] public AudioSource hurt;
     private float currentHealth;
@@ -21,12 +21,12 @@ public class enemy_health : MonoBehaviour
         if (currentHealth > 0)
         {
             //enemy take damage
-            Debug.Log("hurt!");
-            //anim.SetTrigger("hurt");
+            //Debug.Log("hurt!");
+            anim.SetTrigger("hurt");
             
         } else {
-            //anim.SetTrigger("die");
-            Debug.Log("enemy is dead");
+            anim.SetTrigger("die");
+            //Debug.Log("enemy is dead");
         }
     }
 
