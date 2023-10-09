@@ -70,6 +70,7 @@ public class Melee_enemyAttack : MonoBehaviour
     {
         if (PlayerInSight())
         {
+            
             playerHealth.TakeDamage(damage);
         }
     }

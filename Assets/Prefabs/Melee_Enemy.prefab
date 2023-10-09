@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7212024867135388853}
   - component: {fileID: 3758966960917468510}
   - component: {fileID: 3742055277152128429}
+  - component: {fileID: 1225651581848193100}
   m_Layer: 7
   m_Name: Dummy
   m_TagString: Enemy
@@ -79,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
-  range: 2
+  range: 1.2
   damage: 2
   boxCollider: {fileID: 3758966960917468510}
   colliderDistance: 0.5
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0538c40f970b8c84d906657f4d775023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1225651581848193100}
   startingHealth: 3
 --- !u!61 &3758966960917468510
 BoxCollider2D:
@@ -131,7 +133,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.01002115, y: -0.15031564}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -142,7 +144,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1603365, y: 0.6993687}
   m_EdgeRadius: 0
 --- !u!212 &3742055277152128429
 SpriteRenderer:
@@ -196,6 +198,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1225651581848193100
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415187034429216339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f40dfae67cc608c40aa89120c662cd07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3867218589856825205
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +271,7 @@ MonoBehaviour:
   enemy: {fileID: 7588666684053618273}
   speed: 4
   Idleduration: 1
+  anim: {fileID: 1225651581848193100}
 --- !u!1 &6252340909391789915
 GameObject:
   m_ObjectHideFlags: 0

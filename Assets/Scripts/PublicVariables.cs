@@ -5,7 +5,8 @@ using UnityEngine;
 public class PublicVariables : MonoBehaviour
 {
     //Player Health
-    public static int player_health = 5;
+    public static float player_currentHealth = 5;
+    public static float player_maxHealth = 5;
 
     //Player Dash
     public static bool dash_enable = true;
