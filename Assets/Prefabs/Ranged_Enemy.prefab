@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 6919694801887827310}
-  startingHealth: 4
+  startingHealth: 3
   hurt: {fileID: 880399040197081072}
 --- !u!212 &1041738947968165171
 SpriteRenderer:
