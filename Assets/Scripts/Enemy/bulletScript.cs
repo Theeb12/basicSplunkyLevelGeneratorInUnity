@@ -24,7 +24,7 @@ public class bulletScript : MonoBehaviour
     {
         lifetime += Time.deltaTime;
 
-        if (lifetime > 3f)
+        if (lifetime > 2f)
         {
             Destroy(gameObject);
         }

@@ -13,8 +13,8 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberofFlashes;
     private SpriteRenderer spriteRender;
 
-    //[Header("Audio")]
-    //[SerializeField] public AudioSource hurt;
+    [Header("Audio")]
+    [SerializeField] public AudioSource hurt;
     //[SerializeField] public AudioSource Death;
 
     private void Awake()
@@ -23,15 +23,19 @@ public class Health : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();
     }
 
-    public void TakeDamage(float dmg)
+    public void TakeDamage(int dmg)
     {
-        PublicVariables.player_currentHealth = Mathf.Clamp(PublicVariables.player_currentHealth - dmg, 0, PublicVariables.player_maxHealth);
+        PublicVariables.player_currentHealth -= dmg;
+        if (PublicVariables.player_currentHealth < 0)
+        {
+            PublicVariables.player_currentHealth = 0;
+        }
 
         if (PublicVariables.player_currentHealth > 0)
         {
             //player take damage
             //Debug.Log("take damage");
-            //hurt.Play();
+            hurt.Play();
             StartCoroutine(Invulnerability());
         } else {
             if (!dead)
@@ -47,9 +51,8 @@ public class Health : MonoBehaviour
 
     private void PlayerDead()
     {
-        //Death.Play();
-        //LevelManager.instance.GameOver();
-        //change this after having an level manager
+        hurt.Play();
+        LevelManager.instance.GameOver();
         gameObject.SetActive(false);
     }
 
