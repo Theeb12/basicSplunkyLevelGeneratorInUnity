@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private bool dash_performed;
     private float dashTimer;
     private float dashPower = 8;
-    private float dashcdTimer;
+    public float dashcdTimer;
 
     //movement control
     private float xSpeed;
@@ -23,11 +24,15 @@ public class PlayerMovement : MonoBehaviour
     bool grounded = false;
 
     //attack control
-    private float attackcdTimer;
+    public float attackcdTimer;
     public GameObject bulletPrefab;
     public Transform firePoint;
     private int bulletForce = 50;
     private int bulletSpeed = 5;
+
+    //UI
+    [SerializeField] Image DashImg;
+    [SerializeField] Image AttackImg;
 
 
     // Start is called before the first frame update
@@ -69,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
         }
         movement();
         jump();
+        AbilityColor();
     }
 
     void attack()
@@ -153,6 +159,29 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.CompareTag("Platform"))
         {
             grounded = false;
+        }
+    }
+
+
+    //UI Color
+    void AbilityColor()
+    {
+        //Debug.Log("Case starts");
+        if (attackcdTimer > PublicVariables.attackcd)
+        {
+            //Debug.Log("Case1");
+            AttackImg.GetComponent<Image>().color = Color.white;
+        } else {
+            //Debug.Log("Case2");
+            AttackImg.GetComponent<Image>().color = Color.red;
+        }
+        if (PublicVariables.dash_enable && dashcdTimer > PublicVariables.dashcd)
+        {
+            //Debug.Log("Case3");
+            DashImg.GetComponent<Image>().color = Color.white;
+        } else {
+            //Debug.Log("Case4");
+            DashImg.GetComponent<Image>().color = Color.red;
         }
     }
 }
