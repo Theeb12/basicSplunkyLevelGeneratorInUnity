@@ -13,8 +13,8 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberofFlashes;
     private SpriteRenderer spriteRender;
 
-    //[Header("Audio")]
-    //[SerializeField] public AudioSource hurt;
+    [Header("Audio")]
+    [SerializeField] public AudioSource hurt;
     //[SerializeField] public AudioSource Death;
 
     private void Awake()
@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
         {
             //player take damage
             //Debug.Log("take damage");
-            //hurt.Play();
+            hurt.Play();
             StartCoroutine(Invulnerability());
         } else {
             if (!dead)
@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
 
     private void PlayerDead()
     {
-        //Death.Play();
+        hurt.Play();
         LevelManager.instance.GameOver();
         gameObject.SetActive(false);
     }

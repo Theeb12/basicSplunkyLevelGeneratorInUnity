@@ -40,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
     public int middle;
     public int right;
 
+    //SoundEffect
+    [SerializeField] public AudioSource dashSound;
+    [SerializeField] public AudioSource fireballSound;
+    [SerializeField] public AudioSource healing;
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) && attackcdTimer > PublicVariables.attackcd)
         {
+            fireballSound.Play();
             attackcdTimer = 0;
             GameObject newBullet;
             newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
@@ -135,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown("z") && dashcdTimer > PublicVariables.dashcd)
             {
                 dash_performed = true;
+                dashSound.Play();
                 _rigidbody.velocity = new Vector2(Math.Sign(transform.localScale.x) * dashPower, 0);
                 dashTimer = 0f;
                 _rigidbody.gravityScale = 0;
@@ -158,6 +164,9 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.CompareTag("Platform"))
         {
             grounded = true;
+        } else if (col.gameObject.CompareTag("healingcube"))
+        {
+            healing.Play();
         }
         
     }

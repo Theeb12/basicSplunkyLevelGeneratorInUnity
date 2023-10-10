@@ -8,11 +8,12 @@ public class HeallingPrefab : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+
             if (PublicVariables.player_maxHealth != PublicVariables.player_currentHealth)
             {
                 PublicVariables.player_currentHealth += 1;
             }
+            Destroy(gameObject);
         }
     }
 }

@@ -133,11 +133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5445469423926197137, guid: 9ae7fa92cf4d8d34b9410ec63d031bdb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.114
+      value: -5.16
       objectReference: {fileID: 0}
     - target: {fileID: 5445469423926197137, guid: 9ae7fa92cf4d8d34b9410ec63d031bdb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.233
+      value: -6.25
       objectReference: {fileID: 0}
     - target: {fileID: 5445469423926197137, guid: 9ae7fa92cf4d8d34b9410ec63d031bdb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -254,6 +254,10 @@ PrefabInstance:
     - target: {fileID: 5146344278874204525, guid: 5db70a48fb7a7b647ba85c8290452645, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660913304610650718, guid: 5db70a48fb7a7b647ba85c8290452645, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1039,6 +1043,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1408575865317358961, guid: 01c61bec8bcffcd4780ddc82d1a05ea2, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647367753211608130, guid: 01c61bec8bcffcd4780ddc82d1a05ea2, type: 3}
+      propertyPath: healing
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5808010345203378754, guid: 01c61bec8bcffcd4780ddc82d1a05ea2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.629
@@ -1082,6 +1094,10 @@ PrefabInstance:
     - target: {fileID: 6356431824182190463, guid: 01c61bec8bcffcd4780ddc82d1a05ea2, type: 3}
       propertyPath: m_Name
       value: Healing Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356431824182190463, guid: 01c61bec8bcffcd4780ddc82d1a05ea2, type: 3}
+      propertyPath: m_TagString
+      value: healingcube
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
