@@ -10,6 +10,9 @@ public class Read_Display : MonoBehaviour
     [SerializeField] Text RightText;
     [SerializeField] PlayerMovement player;
     [SerializeField] GameObject myself;
+    [SerializeField] Text LeftTitle;
+    [SerializeField] Text MiddleTitle;
+    [SerializeField] Text RightTitle;
 
 
     void Update()
@@ -17,6 +20,61 @@ public class Read_Display : MonoBehaviour
         DisplayWord(LeftText, player.left);
         DisplayWord(MiddleText, player.middle);
         DisplayWord(RightText, player.right);
+        DisplayTitle(LeftTitle, player.left);
+        DisplayTitle(MiddleTitle, player.middle);
+        DisplayTitle(RightTitle, player.right);
+    }
+
+    private void DisplayTitle(Text target, int rand)
+    {
+        if (rand == -1)
+        {
+            target.text = "Some bug happened!";
+        }
+        if (rand == 0)
+        {
+            target.text = "New Life";
+        }
+        if (rand == 1)
+        {
+            target.text = "Action Time";
+        }
+        if (rand == 2)
+        {
+            target.text = "JUMP!";
+        }
+        if (rand == 3)
+        {
+            target.text = "Quick Magic";
+        }
+        if (rand == 4)
+        {
+            target.text = "Deep Think";
+        }
+        if (rand == 5)
+        {
+            target.text = "Hunter Feeling";
+        }
+        if (rand == 6)
+        {
+            target.text = "Fire Everything";
+        }
+        if (rand == 7)
+        {
+            target.text = "Hurt Impact";
+        }
+        if (rand == 8)
+        {
+            target.text = "Trade off";
+        }
+        if (rand == 9)
+        {
+            target.text = "Patient Accurate";
+        }
+        if (rand == 10)
+        {
+            target.text = "Learn new Magic";
+        }
     }
 
     private void DisplayWord(Text target, int rand)
@@ -27,47 +85,47 @@ public class Read_Display : MonoBehaviour
         }
         if (rand == 0)
         {
-            target.text = "New Life \n Gain 1 maximum health and heal yourself by 1";
+            target.text = "Gain 1 maximum health and heal yourself by 1";
         }
         if (rand == 1)
         {
-            target.text = "Reaction \n Increase your speed slightly";
+            target.text = "Increase your speed slightly";
         }
         if (rand == 2)
         {
-            target.text = "Jump \n Increase your jump power slightly";
+            target.text = "Increase your jump power slightly";
         }
         if (rand == 3)
         {
-            target.text = "Quick Magic \n Decrease your dash cooldown slightly";
+            target.text = "Decrease your dash cooldown slightly";
         }
         if (rand == 4)
         {
-            target.text = "Super Power \n Increase your dash power slightly";
+            target.text = "Increase your dash power slightly";
         }
         if (rand == 5)
         {
-            target.text = "Hunter \n Decrease your attack cooldown slightly";
+            target.text = "Decrease your attack cooldown slightly";
         }
         if (rand == 6)
         {
-            target.text = "Fire Everything \n Increase your attack damage slightly";
+            target.text = "Increase your attack damage slightly";
         }
         if (rand == 7)
         {
-            target.text = "Impact \n Lost 1 current health to gain more running speed";
+            target.text = "Lost 1 current health to gain more running speed";
         }
         if (rand == 8)
         {
-            target.text = "Trade off \n You almost lose your speed, but you gain unlimited dash power";
+            target.text = "You almost lose your speed, but you gain unlimited dash power";
         }
         if (rand == 9)
         {
-            target.text = "Patiently \n Increase your attack cooldown, but increase your attack damage";
+            target.text = "Decrease your attack frequency, but increase your attack damage";
         }
         if (rand == 10)
         {
-            target.text = "Learn Magic \n Unlock the Dash ability";
+            target.text = "Unlock the Dash ability! 'Press Z'";
         }
     }
 
@@ -105,12 +163,12 @@ public class Read_Display : MonoBehaviour
         if (input == 1)
         {
             //Increase your speed slightly
-            PublicVariables.player_speed += 1;
+            PublicVariables.player_speed += 2;
         }
         if (input == 2)
         {
             //Increase your jump power slightly
-            PublicVariables.player_jump += 1;
+            PublicVariables.player_jump += 2;
         }
         if (input == 3)
         {
@@ -145,7 +203,7 @@ public class Read_Display : MonoBehaviour
             {
                 PublicVariables.player_currentHealth -= 1;
             }
-            PublicVariables.player_speed += 3;
+            PublicVariables.player_speed += 4;
         }
         if (input == 8)
         {

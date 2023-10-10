@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public AudioSource dashSound;
     [SerializeField] public AudioSource fireballSound;
     [SerializeField] public AudioSource healing;
+    [SerializeField] public AudioSource CollectablesSound;
 
     // Start is called before the first frame update
     void Start()
@@ -130,7 +131,6 @@ public class PlayerMovement : MonoBehaviour
                 _rigidbody.velocity = new Vector2(Mathf.Sign(_rigidbody.velocity.x) * PublicVariables.player_speed, _rigidbody.velocity.y);
             }
         }
-
     }
 
     void dash()
@@ -185,6 +185,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.CompareTag("Collectables"))  //this will get three random number and call out the choice menu and pause the game
         {
             //Debug.Log("I Found It!");
+            CollectablesSound.Play();
             col.gameObject.GetComponent<RandomizeProperty>().re_randomize();
             left = col.gameObject.GetComponent<RandomizeProperty>().leftChoice;
             middle = col.gameObject.GetComponent<RandomizeProperty>().middleChoice;

@@ -599,7 +599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 901075108}
   offset: 1
-  offsetSmoothing: 2
+  offsetSmoothing: 1
 --- !u!1 &901075108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 789917633911696706, guid: 5db70a48fb7a7b647ba85c8290452645, type: 3}
