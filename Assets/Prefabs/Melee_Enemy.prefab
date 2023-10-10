@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1225651581848193100}
-  startingHealth: 3
+  startingHealth: 6
   hurt: {fileID: 4791066238425444893}
 --- !u!61 &3758966960917468510
 BoxCollider2D:
