@@ -29,7 +29,7 @@ public class Ranged_enemy : MonoBehaviour
             if (timer > 2)
             {
                 timer = 0;
-                Debug.Log("Ranged_Attack_Performed");
+                //Debug.Log("Ranged_Attack_Performed");
                 anim.SetTrigger("RangedAttack");
             }
         }

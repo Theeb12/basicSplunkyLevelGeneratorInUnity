@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private bool dash_performed;
     private float dashTimer;
     private float dashPower = 8;
-    private float dashcdTimer;
+    public float dashcdTimer;
 
     //movement control
     private float xSpeed;
@@ -23,12 +24,27 @@ public class PlayerMovement : MonoBehaviour
     bool grounded = false;
 
     //attack control
-    private float attackcdTimer;
+    public float attackcdTimer;
     public GameObject bulletPrefab;
     public Transform firePoint;
     private int bulletForce = 50;
     private int bulletSpeed = 5;
 
+    //UI
+    [SerializeField] Image DashImg;
+    [SerializeField] Image AttackImg;
+    [SerializeField] GameObject ChoiceMenuUI;
+
+    //Random_number
+    public int left;
+    public int middle;
+    public int right;
+
+    //SoundEffect
+    [SerializeField] public AudioSource dashSound;
+    [SerializeField] public AudioSource fireballSound;
+    [SerializeField] public AudioSource healing;
+    [SerializeField] public AudioSource CollectablesSound;
 
     // Start is called before the first frame update
     void Start()
@@ -69,13 +85,18 @@ public class PlayerMovement : MonoBehaviour
         }
         movement();
         jump();
+<<<<<<< HEAD
         Debug.Log(grounded);
+=======
+        AbilityColor();
+>>>>>>> 5dfa06bc7e58925ffd94bde542ba540cbfa26526
     }
 
     void attack()
     {
         if (Input.GetKeyDown(KeyCode.Return) && attackcdTimer > PublicVariables.attackcd)
         {
+            fireballSound.Play();
             attackcdTimer = 0;
             GameObject newBullet;
             newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
@@ -115,7 +136,6 @@ public class PlayerMovement : MonoBehaviour
                 _rigidbody.velocity = new Vector2(Mathf.Sign(_rigidbody.velocity.x) * PublicVariables.player_speed, _rigidbody.velocity.y);
             }
         }
-
     }
 
     void dash()
@@ -125,6 +145,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown("z") && dashcdTimer > PublicVariables.dashcd)
             {
                 dash_performed = true;
+                dashSound.Play();
                 _rigidbody.velocity = new Vector2(Math.Sign(transform.localScale.x) * dashPower, 0);
                 dashTimer = 0f;
                 _rigidbody.gravityScale = 0;
@@ -148,13 +169,58 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.CompareTag("Platform"))
         {
             grounded = true;
+        } else if (col.gameObject.CompareTag("healingcube"))
+        {
+            healing.Play();
         }
+        
     }
+
     private void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Platform"))
         {
             grounded = false;
+        }
+    }
+
+    //collectables
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Collectables"))  //this will get three random number and call out the choice menu and pause the game
+        {
+            //Debug.Log("I Found It!");
+            CollectablesSound.Play();
+            col.gameObject.GetComponent<RandomizeProperty>().re_randomize();
+            left = col.gameObject.GetComponent<RandomizeProperty>().leftChoice;
+            middle = col.gameObject.GetComponent<RandomizeProperty>().middleChoice;
+            right = col.gameObject.GetComponent<RandomizeProperty>().rightChoice;
+            Destroy(col.gameObject);
+            Time.timeScale = 0f;
+            ChoiceMenuUI.SetActive(true);
+        }
+    }
+
+
+    //UI Color
+    void AbilityColor()
+    {
+        //Debug.Log("Case starts");
+        if (attackcdTimer > PublicVariables.attackcd)
+        {
+            //Debug.Log("Case1");
+            AttackImg.GetComponent<Image>().color = Color.white;
+        } else {
+            //Debug.Log("Case2");
+            AttackImg.GetComponent<Image>().color = Color.red;
+        }
+        if (PublicVariables.dash_enable && dashcdTimer > PublicVariables.dashcd)
+        {
+            //Debug.Log("Case3");
+            DashImg.GetComponent<Image>().color = Color.white;
+        } else {
+            //Debug.Log("Case4");
+            DashImg.GetComponent<Image>().color = Color.red;
         }
     }
 }

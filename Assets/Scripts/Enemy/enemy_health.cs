@@ -6,7 +6,7 @@ public class enemy_health : MonoBehaviour
 {
     [SerializeField] private Animator anim;
     [SerializeField] private float startingHealth;
-    //[SerializeField] public AudioSource hurt;
+    [SerializeField] public AudioSource hurt;
     private float currentHealth;
 
     private void Awake()
@@ -17,7 +17,7 @@ public class enemy_health : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         currentHealth = Mathf.Clamp(currentHealth - dmg, 0, startingHealth);
-        //hurt.Play();
+        hurt.Play();
         if (currentHealth > 0)
         {
             //enemy take damage
@@ -33,6 +33,7 @@ public class enemy_health : MonoBehaviour
     public void Dead()
     {
         if (gameObject != null)
+            hurt.Play();
             Destroy(gameObject);
     }
 }
