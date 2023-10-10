@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/levelDesignPlayground.unity
     guid: 5e471d47d5aeeb140aa4ddf4b893cda9
+  - enabled: 1
+    path: Assets/Scenes/winScreen.unity
+    guid: 7fe9e31129cf3a74688574098130c558
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
