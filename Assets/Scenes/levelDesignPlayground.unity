@@ -452,6 +452,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeSceneByName
       objectReference: {fileID: 0}
+    - target: {fileID: 2437416115800167677, guid: 2917d824489eb814db492bb9ad1e2d3d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Start Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 3923233722365045006, guid: 2917d824489eb814db492bb9ad1e2d3d, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -474,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6159725165879157111, guid: 2917d824489eb814db492bb9ad1e2d3d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: start
+      value: Start Menu
       objectReference: {fileID: 0}
     - target: {fileID: 7208250781492107182, guid: 2917d824489eb814db492bb9ad1e2d3d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
