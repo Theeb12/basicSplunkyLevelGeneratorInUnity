@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 789917633911696706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.67, y: -2.59, z: 0}
+  m_LocalPosition: {x: -8.91, y: -2.59, z: 0}
   m_LocalScale: {x: 2.25, y: 2.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -150,8 +150,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e735b4ff686cd984884a4fee68be9936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashcdTimer: 0
+  attackcdTimer: 0
   bulletPrefab: {fileID: 5809592985920804790, guid: 3b96f78f23ef9ca4ab1784fde5bf65b4, type: 3}
   firePoint: {fileID: 6204772580889279481}
+  DashImg: {fileID: 0}
+  AttackImg: {fileID: 0}
+  ChoiceMenuUI: {fileID: 0}
+  left: 0
+  middle: 0
+  right: 0
 --- !u!61 &6898939635229875463
 BoxCollider2D:
   m_ObjectHideFlags: 0

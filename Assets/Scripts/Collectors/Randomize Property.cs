@@ -12,10 +12,9 @@ public class RandomizeProperty : MonoBehaviour
     {
         leftChoice = Random.Range(0, 10);
         rightChoice = Random.Range(0, 10);
+        middleChoice = Random.Range(0,10);
         if (PublicVariables.dash_enable == false){
             middleChoice = 10;
-        } else {
-            middleChoice = Random.Range(0,10);
         }
         for (int i = 1; i > 0; i++)
         {
@@ -31,9 +30,10 @@ public class RandomizeProperty : MonoBehaviour
             }
         }
 
-        Debug.Log("Left value is" + leftChoice);
-        Debug.Log("middle value is" + middleChoice);
-        Debug.Log("Right value is" + rightChoice);
+
+        //Debug.Log("Left value is" + leftChoice);
+        //Debug.Log("middle value is" + middleChoice);
+        //Debug.Log("Right value is" + rightChoice);
     }
 
 }

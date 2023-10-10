@@ -37,7 +37,7 @@ public class Melee_enemyAttack : MonoBehaviour
             {
                 cooldownTime = 0;
                 anim.SetTrigger("meleeattack");
-                Debug.Log("Melee Attack Perform");
+                //Debug.Log("Melee Attack Perform");
             }
         }
         if (enemyPatrol != null)
