@@ -48,8 +48,7 @@ public class Health : MonoBehaviour
     private void PlayerDead()
     {
         //Death.Play();
-        //LevelManager.instance.GameOver();
-        //change this after having an level manager
+        LevelManager.instance.GameOver();
         gameObject.SetActive(false);
     }
 
