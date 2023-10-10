@@ -23,9 +23,13 @@ public class Health : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();
     }
 
-    public void TakeDamage(float dmg)
+    public void TakeDamage(int dmg)
     {
-        PublicVariables.player_currentHealth = Mathf.Clamp(PublicVariables.player_currentHealth - dmg, 0, PublicVariables.player_maxHealth);
+        PublicVariables.player_currentHealth -= dmg;
+        if (PublicVariables.player_currentHealth < 0)
+        {
+            PublicVariables.player_currentHealth = 0;
+        }
 
         if (PublicVariables.player_currentHealth > 0)
         {

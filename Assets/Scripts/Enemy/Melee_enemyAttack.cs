@@ -7,7 +7,7 @@ public class Melee_enemyAttack : MonoBehaviour
     [Header ("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
-    [SerializeField] private float damage;
+    [SerializeField] private int damage;
 
     [Header ("Collider Parameters")]
     [SerializeField] private BoxCollider2D boxCollider;
