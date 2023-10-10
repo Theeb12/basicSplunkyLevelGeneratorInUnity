@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
         movement();
         jump();
+        Debug.Log(grounded);
     }
 
     void attack()
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, PublicVariables.player_jump);
+
         }
     }
 

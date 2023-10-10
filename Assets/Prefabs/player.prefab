@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1158162819423911900}
   - component: {fileID: 3966682598579574956}
   - component: {fileID: 4944280321268189796}
-  - component: {fileID: 6898939635229875463}
   - component: {fileID: 1081944826354048414}
+  - component: {fileID: 7220918607885205231}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -124,7 +124,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -137,7 +137,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4944280321268189796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,8 +152,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5809592985920804790, guid: 3b96f78f23ef9ca4ab1784fde5bf65b4, type: 3}
   firePoint: {fileID: 6204772580889279481}
---- !u!61 &6898939635229875463
-BoxCollider2D:
+--- !u!114 &1081944826354048414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789917633911696706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ddb0428851673346a46bbb974eabdda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IframeDuration: 2
+  numberofFlashes: 2
+--- !u!58 &7220918607885205231
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,33 +198,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0011801273, y: -0.049574934}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.22, y: 0.29}
-    newSize: {x: 0.22, y: 0.29}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.008134683, y: -0.024403175}
   serializedVersion: 2
-  m_Size: {x: 0.3687248, y: 0.1908501}
-  m_EdgeRadius: 0
---- !u!114 &1081944826354048414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789917633911696706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ddb0428851673346a46bbb974eabdda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IframeDuration: 2
-  numberofFlashes: 2
+  m_Radius: 0.11246279
 --- !u!1 &7008215734282163038
 GameObject:
   m_ObjectHideFlags: 0
