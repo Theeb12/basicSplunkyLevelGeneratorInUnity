@@ -10,7 +10,7 @@ public class PublicVariables : MonoBehaviour
 
     //Player Dash
     public static bool dash_enable = true;
-    public static float dashcd = 3;
+    public static float dashcd = 5;
     public static float dashLimit = 0.1f;
 
     //Player Movement

@@ -33,6 +33,12 @@ public class PlayerMovement : MonoBehaviour
     //UI
     [SerializeField] Image DashImg;
     [SerializeField] Image AttackImg;
+    [SerializeField] GameObject ChoiceMenuUI;
+
+    //Random_number
+    public int left;
+    public int middle;
+    public int right;
 
 
     // Start is called before the first frame update
@@ -153,12 +159,30 @@ public class PlayerMovement : MonoBehaviour
         {
             grounded = true;
         }
+        
     }
+
     private void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Platform"))
         {
             grounded = false;
+        }
+    }
+
+    //collectables
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Collectables"))  //this will get three random number and call out the choice menu and pause the game
+        {
+            //Debug.Log("I Found It!");
+            col.gameObject.GetComponent<RandomizeProperty>().re_randomize();
+            left = col.gameObject.GetComponent<RandomizeProperty>().leftChoice;
+            middle = col.gameObject.GetComponent<RandomizeProperty>().middleChoice;
+            right = col.gameObject.GetComponent<RandomizeProperty>().rightChoice;
+            Destroy(col.gameObject);
+            Time.timeScale = 0f;
+            ChoiceMenuUI.SetActive(true);
         }
     }
 
